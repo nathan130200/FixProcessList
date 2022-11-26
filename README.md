@@ -39,7 +39,7 @@ The `Kind` attribute refers to the type of filter that will be used. There are s
 
 - The flags can be combined for example `Kind="ByNameExact, First"` the program will understand that you are looking for the process with that EXACT name and ONLY the FIRST occurrence.
 
-- The `Name` attribute, will better describe what rule does. Useful for error reporting/diagnostics. It's a OPTIONAL attribute. If not defined, will name all rules by `count of rules++`
+- The `Name` attribute, will better describe what rule does. Useful for error reporting/diagnostics. It's a OPTIONAL attribute. If not defined, will name all rules by `Rule 1`, `Rule 2`, `Rule n`, `...`
 
 Each `Param` is a set of params required for that filter. First param is filter in fact, process name or regex.
 
