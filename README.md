@@ -45,7 +45,7 @@ Each `Param` is a set of params required for that filter. First param is filter 
 
 Second param vary by type of rule:
 - `SetPriority` second param is kind of priority (Lowest, Low, Normal, High, Highest)
-- `KillProcess` second param is `1` or `0` to indicate whether or not to terminate the process tree or only found process. (Example: Some processes can start legacy processes, if true it will terminate the process and all its child processes)
+- `KillProcess` second param is `1` or `0` to indicate whether or not to terminate the process tree or only found process. (Example: Some processes can start child processes attached to parent process)
 
 
 # Sample Rules
