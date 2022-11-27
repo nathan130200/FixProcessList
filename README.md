@@ -53,43 +53,46 @@ Second param vary by type of rule:
 Take an example of my own set of rules:
 
 ```xml
-<Rules>
-	<SetPriority Kind="ByNamePattern">
-		<Param>Discord(Canary)?</Param>
-		<Param>Lowest</Param>
-	</SetPriority>
-	
-	<SetPriority Kind="ByNamePattern">
-		<Param>chrome(\.exe)?</Param>
-		<Param>Lowest</Param>
-	</SetPriority>
-	
-	<KillProcess Kind="ByNamePattern">
-		<Param>dllhost(\.exe)?</Param>
-		<Param>1</Param>
-	</KillProcess>
-	
-	<KillProcess Kind="ByNamePattern">
-		<Param>(GameBar|HelpPane).*</Param>
-		<Param>1</Param>
-	</KillProcess>
 
-	<KillProcess Kind="ByName">
-		<Param>msedge</Param>
-		<Param>1</Param>
-	</KillProcess>
-	
+<Rules>
+
 	<SetPriority Kind="ByNamePattern">
-		<Param>(RuntimeBroker|SearchApp|UserOOBEBroker|Xbox*)(\.exe)?</Param>
+		<Param>Discord(Canary|PTB)?</Param>
 		<Param>Lowest</Param>
 	</SetPriority>
 	
-	<KillProcess Kind="ByNamePattern">
-		<Param>SystemSettings(Broker)?(\.exe)?</Param>
-		<Param>1</Param>
-	</KillProcess>
+	<SetPriority Kind="ByNamePattern">
+		<Param>chrome</Param>
+		<Param>Low</Param>
+	</SetPriority>
+	
+	<SetPriority Kind="ByNamePattern">
+		<Param>obs(32|64)?*</Param>
+		<Param>Highest</Param>
+	</SetPriority>
+	
+	<SetPriority Kind="ByNamePattern">
+		<Param>(GameBar|HelpPane)*</Param>
+		<Param>Low</Param>
+	</SetPriority>
+
+	<SetPriority Kind="ByNamePattern">
+		<Param>(msedge)*</Param>
+		<Param>Low</Param>
+	</SetPriority>
+	
+	<SetPriority Kind="ByNamePattern" MaxCount="2">
+		<Param>(ShaderCompileWorker)*</Param>
+		<Param>Normal</Param>
+	</SetPriority>
+	
+	<SetPriority Kind="ByNamePattern">
+		<Param>(Runtime(Broker)?|SearchApp|UserOOBEBroker|Xbox*)</Param>
+		<Param>Low</Param>
+	</SetPriority>
 	
 </Rules>
+
 
 ```
 
